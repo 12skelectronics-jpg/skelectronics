@@ -28,7 +28,27 @@ export const PHOTOS = {
   workbench: "workbench.jpg",
   technician: "technician.jpg",
   training: "training.jpg",
+  bench2: "gallery/workbench-2.jpg",
 };
+
+// Real photos of the shop (public/gallery)
+export const GALLERY = [
+  { src: "gallery/interior.jpg", alt: "Inside the SK Electronics workshop", wide: true },
+  { src: "gallery/workbench-2.jpg", alt: "Repair bench with microscope and soldering station" },
+  { src: "gallery/technician-1.jpg", alt: "Technician repairing a phone under the microscope" },
+  { src: "gallery/technician-2.jpg", alt: "Chip-level repair at SK Electronics" },
+  { src: "gallery/microscope.jpg", alt: "Microscope soldering setup" },
+  { src: "gallery/bench.jpg", alt: "SK Electronics repair workstation" },
+];
+
+// Stock photos from Wikimedia Commons — the licence requires the credit shown on the site.
+export const STOCK = [
+  { src: "stock/cracked-screen.jpg", caption: "Screen & battery replacement", author: "Thilo Parg", source: "https://commons.wikimedia.org/wiki/File:IPhone_6s_display_repair_2.jpg" },
+  { src: "stock/soldering.jpg", caption: "Board-level soldering", author: "Johnnybam", source: "https://commons.wikimedia.org/wiki/File:Skilled_Phone_Repairer_at_Work.jpg" },
+  { src: "stock/battery.jpg", caption: "Careful disassembly", author: "Thilo Parg", source: "https://commons.wikimedia.org/wiki/File:IPhone_6s_display_repair_4.jpg" },
+  { src: "stock/components.jpg", caption: "Every part, understood", author: "DYVER", source: "https://commons.wikimedia.org/wiki/File:Komponenten_des_iPhone_4.jpg" },
+];
+export const STOCK_LICENSE = { name: "CC BY-SA 4.0", url: "https://creativecommons.org/licenses/by-sa/4.0/" };
 
 // Real reviews copied from the Google listing (shortened where Google truncates).
 export const REVIEWS = [

@@ -1,4 +1,4 @@
-import { APART } from "../data.js";
+import { APART, GALLERY } from "../data.js";
 import { Photo, SectionHead, Card, CtaBand } from "../components.jsx";
 
 const STATS = [
@@ -60,6 +60,17 @@ export default function About() {
       </section>
 
       <section className="section section-alt">
+        <div className="container">
+          <SectionHead title="Inside Our Workshop" text="Real photos from our shop in Durgigudi, Shivamogga." />
+          <div className="gallery">
+            {GALLERY.map((g) => (
+              <img key={g.src} className={g.wide ? "wide" : ""} src={import.meta.env.BASE_URL + g.src} alt={g.alt} loading="lazy" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <SectionHead title="What Sets Us Apart" />
           <div className="grid grid-2">

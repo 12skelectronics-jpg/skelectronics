@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SERVICES, BRANDS } from "../data.js";
+import { SERVICES, BRANDS, STOCK, STOCK_LICENSE } from "../data.js";
 import { Photo, CallButton, SectionHead, Card, CtaBand } from "../components.jsx";
 
 export default function Services() {
@@ -19,7 +19,7 @@ export default function Services() {
               <Link className="btn btn-outline" to="/contact">Get in Touch</Link>
             </div>
           </div>
-          <Photo name="workbench" alt="Phone circuit board repair" className="hero-photo" label="Chip-level repairs" />
+          <Photo name="bench2" alt="SK Electronics repair bench with microscope" className="hero-photo" label="Chip-level repairs" />
         </div>
       </section>
 
@@ -33,6 +33,26 @@ export default function Services() {
       </section>
 
       <section className="section section-alt">
+        <div className="container">
+          <SectionHead title="Repairs in Action" text="Precision work on every device — from screens and batteries to the motherboard." />
+          <div className="stock-grid">
+            {STOCK.map((s) => (
+              <figure key={s.src} className="stock">
+                <img src={import.meta.env.BASE_URL + s.src} alt={s.caption} loading="lazy" />
+                <figcaption>
+                  <b>{s.caption}</b>
+                  <small>
+                    Photo: <a href={s.source} target="_blank" rel="noopener noreferrer">{s.author}</a>,{" "}
+                    <a href={STOCK_LICENSE.url} target="_blank" rel="noopener noreferrer">{STOCK_LICENSE.name}</a>
+                  </small>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <SectionHead center title="All Brands Serviced" text="We repair all major smartphone and tablet brands" />
           <div className="chips">

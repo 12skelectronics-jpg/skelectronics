@@ -63,8 +63,28 @@ h1, h2, h3 { line-height: 1.15; margin: 0; letter-spacing: -0.02em; }
 .header-actions { display: flex; align-items: center; gap: 10px; }
 .menu-btn { display: none; background: none; border: 0; padding: 6px; cursor: pointer; color: var(--text); }
 
-.logo { height: 56px; width: auto; border-radius: 6px; margin-bottom: 18px; }
-.logo.sm { height: 38px; margin: 0; }
+.logo { height: 96px; width: auto; border-radius: 10px; margin-bottom: 18px; }
+.logo.sm { height: 46px; border-radius: 6px; margin: 0; }
+
+/* ---------- Gallery & stock ---------- */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 220px; gap: 14px; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+.gallery .wide { grid-column: span 2; grid-row: span 2; }
+.stock-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.stock { margin: 0; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.stock img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.stock figcaption { padding: 14px 16px; display: grid; gap: 4px; }
+.stock figcaption b { font-size: 0.95rem; }
+.stock small { color: var(--muted); font-size: 0.72rem; }
+.stock small a { color: var(--muted); }
+@media (max-width: 900px) {
+  .stock-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+}
+@media (max-width: 520px) {
+  .stock-grid { grid-template-columns: 1fr; }
+  .gallery .wide { grid-column: span 2; grid-row: span 1; }
+}
 .logo-fallback {
   display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 18px;
   background: linear-gradient(135deg, var(--black), #23314f); color: #fff; border-radius: 10px;
