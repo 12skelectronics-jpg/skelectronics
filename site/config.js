@@ -4,7 +4,7 @@
 // ============================================================
 window.SITE = {
   name: "SK Electronics",
-  tagline: "Expert mobile phone repair in Shivamogga. Genuine parts, skilled hands, honest pricing.",
+  tagline: "Expert mobile phone repair in Shivamogga, plus mobile repair classes, IoT projects and college software projects.",
 
   // Phone in international format for links, plus how it should look on the page
   phone: "+919686450360",
@@ -29,6 +29,13 @@ window.SITE = {
     { icon: "📷", title: "Camera Repair", text: "Blurry photos or a camera that won't open — front and rear." },
     { icon: "🔊", title: "Speaker & Mic Repair", text: "No sound, distorted audio or callers can't hear you." },
     { icon: "🔬", title: "Motherboard & IC Repair", text: "Chip-level board repairs using microscope soldering equipment." },
+  ],
+
+  // Training & projects section. Empty list = section hidden.
+  more: [
+    { icon: "🎓", title: "Mobile Repair Classes", text: "Hands-on mobile phone repair training at our workshop. Learn hardware and software repair from experienced technicians. Call us for batch timings and details." },
+    { icon: "📡", title: "IoT Projects", text: "IoT project development and guidance for students and hobbyists — sensors, microcontrollers and connected devices." },
+    { icon: "💻", title: "College Software Projects", text: "Software projects for college students, with guidance to help you understand and present your project." },
   ],
 
   brands: ["Samsung", "Apple iPhone", "Redmi / Xiaomi", "Realme", "OnePlus", "Vivo", "Oppo", "Motorola", "Nokia", "Poco"],

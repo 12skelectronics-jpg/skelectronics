@@ -83,6 +83,7 @@ h3 { margin: 0 0 6px; }
 .brands-title { margin: 48px 0 16px; font-size: 1.2rem; }
 .brands { display: flex; flex-wrap: wrap; gap: 10px; }
 .chip { padding: 8px 16px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); font-weight: 600; font-size: .9rem; }
+.section-lead { color: var(--muted); margin: -12px 0 28px; }
 .reviews p { color: var(--muted); margin: -12px 0 24px; }
 
 .visit { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start; }

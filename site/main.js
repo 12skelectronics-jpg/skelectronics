@@ -8,6 +8,7 @@
     whatsapp: !!S.whatsapp,
     email: !!S.email,
     hours: hours.length > 0,
+    more: (S.more || []).length > 0,
   };
   document.querySelectorAll("[data-show]").forEach(function (el) {
     if (!present[el.dataset.show]) el.remove();
@@ -32,9 +33,11 @@
     el.href = links[el.dataset.href];
   });
 
-  // Services
-  var grid = document.getElementById("services-grid");
-  (S.services || []).forEach(function (s) {
+  // Card grids (services, training & projects)
+  function fillCards(gridId, items) {
+    var grid = document.getElementById(gridId);
+    if (!grid) return;
+    (items || []).forEach(function (s) {
     var card = document.createElement("article");
     card.className = "card";
     card.innerHTML = '<div class="icon"></div><h3></h3><p></p>';
@@ -42,7 +45,10 @@
     card.querySelector("h3").textContent = s.title || "";
     card.querySelector("p").textContent = s.text || "";
     grid.appendChild(card);
-  });
+    });
+  }
+  fillCards("services-grid", S.services);
+  fillCards("more-grid", S.more);
 
   // Brands
   var brands = document.getElementById("brands");
