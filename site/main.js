@@ -26,6 +26,7 @@
     wa: "https://wa.me/" + String(S.whatsapp || "").replace(/\D/g, ""),
     mail: "mailto:" + (S.email || ""),
     maps: S.mapsUrl || ("https://www.google.com/maps?q=" + S.lat + "," + S.lng),
+    reviews: S.reviewsUrl || S.mapsUrl,
   };
   document.querySelectorAll("[data-href]").forEach(function (el) {
     el.href = links[el.dataset.href];
@@ -42,6 +43,16 @@
     card.querySelector("p").textContent = s.text || "";
     grid.appendChild(card);
   });
+
+  // Brands
+  var brands = document.getElementById("brands");
+  (S.brands || []).forEach(function (b) {
+    var chip = document.createElement("span");
+    chip.className = "chip";
+    chip.textContent = b;
+    brands.appendChild(chip);
+  });
+  if (!(S.brands || []).length) document.querySelector(".brands-title").remove();
 
   // Hours
   var table = document.getElementById("hours");

@@ -80,6 +80,11 @@ h3 { margin: 0 0 6px; }
 .card .icon { font-size: 2rem; margin-bottom: 10px; }
 .card p { color: var(--muted); margin: 0; }
 
+.brands-title { margin: 48px 0 16px; font-size: 1.2rem; }
+.brands { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { padding: 8px 16px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); font-weight: 600; font-size: .9rem; }
+.reviews p { color: var(--muted); margin: -12px 0 24px; }
+
 .visit { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start; }
 .address { font-size: 1.1rem; color: var(--muted); margin-top: 0; }
 .hours { border-collapse: collapse; margin: 0 0 24px; }
