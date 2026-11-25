@@ -7,7 +7,10 @@ export const SHOP = {
   phoneDisplay: "96864 50360",
   // WhatsApp number used by the contact form (digits only, with country code)
   whatsapp: "919686450360",
-  address: "SK Electronics, Shivamogga, Karnataka — 577201",
+  address: "LLR Rd, Durgigudi, Shivamogga, Karnataka 577201",
+  // From the Google listing (update when it changes)
+  rating: "4.8",
+  reviewCount: 76,
   hours: "9:00 AM – 7:00 PM",
   lat: 13.9339755,
   lng: 75.570506,
@@ -24,7 +27,20 @@ export const PHOTOS = {
   shop: "shop.jpg",
   workbench: "workbench.jpg",
   technician: "technician.jpg",
+  training: "training.jpg",
 };
+
+// Real reviews copied from the Google listing (shortened where Google truncates).
+export const REVIEWS = [
+  {
+    name: "Chetankumar Patil",
+    text: "I feel very happy to give a review about this service center. The owner is very experienced, and the employees also have good knowledge and are highly skilled. The owner responds very politely and respects the customers, providing excellent…",
+  },
+  {
+    name: "Syed Dadapeer",
+    text: "I had an excellent experience with the Mobile Training Center. The staff were friendly, patient, and extremely knowledgeable. The training materials were up-to-date, and the hands-on activities made learning easy and enjoyable…",
+  },
+];
 
 export const SERVICES = [
   { icon: "Smartphone", title: "Screen Replacement", text: "Cracked, shattered, or unresponsive display? We replace screens for all major brands using genuine-quality parts. Your phone will look and feel brand new.", tag: "Samsung, Apple, Redmi, Realme, OnePlus, Vivo, Oppo" },

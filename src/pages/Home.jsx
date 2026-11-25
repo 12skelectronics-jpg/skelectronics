@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { MapPin, ArrowRight } from "lucide-react";
-import { SERVICES, WHY, TRAINING } from "../data.js";
+import { MapPin, ArrowRight, Star } from "lucide-react";
+import { SERVICES, WHY, TRAINING, SHOP } from "../data.js";
 import { Logo, Photo, CallButton, DirectionsButton, SectionHead, Card, CtaBand } from "../components.jsx";
 
 export default function Home() {
@@ -20,6 +20,9 @@ export default function Home() {
               <CallButton />
               <DirectionsButton />
             </div>
+            <Link to="/reviews" className="mini-rating">
+              <Star size={16} fill="currentColor" strokeWidth={0} /> <b>{SHOP.rating}</b> · {SHOP.reviewCount} Google reviews
+            </Link>
           </div>
           <Photo name="shop" alt="SK Electronics shop in Shivamogga" className="hero-photo" label="Our Shivamogga workshop" />
         </div>

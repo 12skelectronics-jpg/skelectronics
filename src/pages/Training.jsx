@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { TRAINING } from "../data.js";
-import { CallButton, SectionHead, Icon, CtaBand } from "../components.jsx";
+import { CallButton, SectionHead, Icon, CtaBand, Photo } from "../components.jsx";
 
 export default function Training() {
   return (
     <>
-      <section className="hero hero-simple">
-        <div className="container">
+      <section className="hero">
+        <div className="container hero-grid">
+          <div>
           <p className="eyebrow">Training & Projects</p>
           <h1>Learn, Build, and Grow with SK Electronics</h1>
           <p className="lead">
@@ -17,6 +18,8 @@ export default function Training() {
             <CallButton>Call to Enquire</CallButton>
             <Link className="btn btn-outline" to="/contact">Send a Message</Link>
           </div>
+          </div>
+          <Photo name="training" alt="Mobile repair class in progress at SK Electronics" className="hero-photo" label="Mobile repair classes" />
         </div>
       </section>
 
