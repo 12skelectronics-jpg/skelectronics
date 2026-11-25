@@ -1,0 +1,4 @@
+# Large media - keep out of the repo
+*.mkv
+*.mp4
+_site/
